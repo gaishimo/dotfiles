@@ -1,0 +1,9 @@
+[user]
+  email = gaishmo@gmail.com
+  name = "Toru Shimogaisho"
+[include]
+  path = .gitconfig.local
+[color]
+  ui = auto
+[core]
+  editor = vim
