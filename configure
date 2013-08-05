@@ -1,13 +1,47 @@
-#! /bin/sh
+#!/bin/bash
+# dotfilesを指定の場所に展開して環境を構築する
+# setup.sh <install|uninstall>
 
-# get dotfiles list
-files=`ls -1Ap | grep "^\.[^./]\{1,\}$"`
+# dotfilesを配置するディレクトリ
+dotfiles_dir=$HOME/src/settings/dotfiles
+# userは第2引数
+user=$HOME
+# home directory以下に展開「しない」ファイルのリスト
+ignore="
+.git
+.gitignore
+configure
+README.md
+"
+############## 設定ここまで
+# 展開対象の抽出
+files=`ls -A $dotfiles_dir`
+dotfiles=`echo -n "$files$ignore" | sort | uniq -u`
 
-for file in $files; do
-	if [ -f "$HOME/$file" ]; then
-		continue
-	fi
+# home directory
+if [ "$user" = "root" ];then
+    homedir=/root
+else
+    homedir=$HOME
+fi
 
-	echo "> create symlink to $HOME/$file"
-	ln -s $PWD/$file $HOME/$file
-done
+## setup
+case $1 in
+"install")
+    # 展開
+    for f in $dotfiles;do
+        if [ -f $dotfiles_dir/$f -o -d $dotfiles_dir/$f ];then
+            ln -fs $dotfiles_dir/$f $homedir
+        fi
+    done
+    ;;
+"uninstall")
+    # 削除
+    for f in $dotfiles;do
+        rm -f $homedir/$f
+    done
+    ;;
+*)
+    echo "option is [install/uninstall]"
+    ;;
+esac
