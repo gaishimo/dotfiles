@@ -1,0 +1,56 @@
+update
+
+upgrade
+
+tap phinze/homebrew-cask
+install brew-cask
+
+install zsh
+install git
+install coreutils
+
+# ruby
+install rbenv
+install ruby-build
+install rbenv-gemset
+install rbenv-gem-rehash
+install mysql
+
+install imagemagick
+
+install tmux
+install openssl
+install readline
+
+tap sanemat/font
+install ricty
+install cmake
+install libtool
+install automake
+
+install redis
+
+# casks
+
+cask install java
+cask install firefox
+cask install opera
+cask install google-chrome
+cask install sequel-pro
+cask install atom
+cask install skitch
+cask install skype
+cask install charles
+cask install dash
+cask install kobito
+cask install virtualbox
+cask install vagrant
+cask install yorufukurou
+cask install sophos-anti-virus-home-edition
+cask install dropbox
+cask install hipchat
+cask install heroku-toolbelt
+cask install alfred
+cask install divvy
+cask install macvim
+
