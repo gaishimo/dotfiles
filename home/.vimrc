@@ -86,6 +86,8 @@ set cmdheight=2
 " コマンドをステータス行に表示
 set showcmd
 
+set clipboard=unnamed
+
 """""""""""""""
 " キーバインド
 """""""""""""""
@@ -124,3 +126,30 @@ if version >= 703
     endif
   endfunction
 endif
+
+
+" neobundle
+set nocompatible               " Be iMproved
+filetype off                   " Required!
+
+if has('vim_starting')
+  set runtimepath+=~/.vim/neobundle.vim
+endif
+
+call neobundle#rc(expand('~/.vim/bundle/'))
+
+filetype plugin indent on     " Required!
+
+NeoBundle 'kana/vim-fakeclip'
+
+" Installation check.
+if neobundle#exists_not_installed_bundles()
+  echomsg 'Not installed bundles : ' .
+        \ string(neobundle#get_not_installed_bundle_names())
+  echomsg 'Please execute ":NeoBundleInstall" command.'
+  "finish
+endif
+
+
+
+

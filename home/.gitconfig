@@ -1,0 +1,26 @@
+[user]
+	email = gaithimo@gmail.com
+	name = gaishimo
+[include]
+  path = .gitconfig.local
+[color]
+  ui = auto
+[core]
+  editor = vim
+  excludesfile = /opt/boxen/config/git/gitignore
+	precomposeunicode = true
+
+[credential]
+helper = /opt/boxen/bin/boxen-git-credential
+
+[hub]
+protocol = https
+
+[alias]
+  st=status
+  sh=show
+  cm=commit
+  co=checkout
+	delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
+[ghn]
+	token = d34e620820d8964e3fd299a3edbebe460555e8b8
