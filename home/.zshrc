@@ -104,7 +104,8 @@ export GREP_OPTIONS='--color=auto'
 [ -f $HOME/.zshrc.mine ] && source $HOME/.zshrc.mine
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 
-export PATH=$HOME/.bin:$HOME/.nodebrew/current/bin:$PATH
+path=($HOME/bin $HOME/.rbenv/bin(N) $HOME/.nodebrew/current/bin $path)
+eval "$(rbenv init -)"
 export JAVA_HOME=`/usr/libexec/java_home`
 
 export DOCKER_HOST=tcp://127.0.0.1:4243
