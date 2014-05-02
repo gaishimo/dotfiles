@@ -102,7 +102,6 @@ export GREP_OPTIONS='--color=auto'
 
 # source ~/.bin/tmuxinator.bash
 [ -f $HOME/.zshrc.mine ] && source $HOME/.zshrc.mine
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 
 path=($HOME/bin $HOME/.rbenv/bin(N) $HOME/.nodebrew/current/bin $path)
 eval "$(rbenv init -)"
