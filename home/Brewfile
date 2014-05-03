@@ -1,8 +1,8 @@
 update
-
 upgrade
 
 tap phinze/homebrew-cask
+tap gaishimo/homebrew-cask
 install brew-cask
 
 install zsh
@@ -53,4 +53,5 @@ cask install heroku-toolbelt
 cask install alfred
 cask install divvy
 cask install macvim
+cask install sublime-text3
 
