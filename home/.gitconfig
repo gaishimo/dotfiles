@@ -24,3 +24,5 @@ protocol = https
 	delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
 [ghn]
 	token = d34e620820d8964e3fd299a3edbebe460555e8b8
+[push]
+	default = simple
