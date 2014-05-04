@@ -99,6 +99,8 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export EDITOR=vim
 #export LESS='--tabs=4 --no-init --LONG-PROMPT --ignore-case --SILENT'
 export GREP_OPTIONS='--color=auto'
+export PROMPT="%d $ "
+
 
 # source ~/.bin/tmuxinator.bash
 [ -f $HOME/.zshrc.mine ] && source $HOME/.zshrc.mine
