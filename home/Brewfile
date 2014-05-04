@@ -36,6 +36,7 @@ cask install java
 cask install firefox
 cask install opera
 cask install google-chrome
+cask install google-japanese-ime
 cask install sequel-pro
 cask install atom
 cask install skitch
@@ -54,4 +55,7 @@ cask install alfred
 cask install divvy
 cask install macvim
 cask install sublime-text3
+cask install iterm2
+
+cask alfred link
 
