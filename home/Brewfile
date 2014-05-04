@@ -57,7 +57,8 @@ cask install macvim
 cask install sublime-text3
 cask install iterm2
 cask install node-webkit
-cast install jumpcut
+cask install jumpcut
+cask install mysqlworkbench
 
 cask alfred link
 
