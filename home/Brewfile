@@ -57,6 +57,7 @@ cask install macvim
 cask install sublime-text3
 cask install iterm2
 cask install node-webkit
+cast install jumpcut
 
 cask alfred link
 
