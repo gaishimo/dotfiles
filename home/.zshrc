@@ -1,10 +1,11 @@
+
 autoload -Uz compinit
 compinit
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*' ignore-parents parent pwd ..
-zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
-                   /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
+# zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
+#                   /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 
 autoload -Uz colors
@@ -105,7 +106,7 @@ export PROMPT="%d $ "
 # source ~/.bin/tmuxinator.bash
 [ -f $HOME/.zshrc.mine ] && source $HOME/.zshrc.mine
 
-path=($HOME/bin $HOME/.rbenv/bin(N) $HOME/.nodebrew/current/bin $path)
+path=(/usr/local/bin $HOME/bin $HOME/.rbenv/bin(N) $HOME/.nodebrew/current/bin $path)
 eval "$(rbenv init -)"
 export JAVA_HOME=`/usr/libexec/java_home`
 
