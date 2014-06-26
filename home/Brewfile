@@ -1,6 +1,7 @@
 update
 upgrade
 
+tap homebrew/versions
 tap phinze/homebrew-cask
 tap gaishimo/homebrew-cask
 install brew-cask
@@ -21,7 +22,7 @@ install imagemagick
 install tmux
 install openssl
 install readline
-
+install nkf
 tap sanemat/font
 install ricty
 install cmake
@@ -29,6 +30,10 @@ install libtool
 install automake
 install hub
 install redis
+install watch
+
+install docker
+install boot2docker
 
 # casks
 
