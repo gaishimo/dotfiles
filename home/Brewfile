@@ -18,6 +18,7 @@ install rbenv-gem-rehash
 install mysql
 
 install imagemagick
+install graphviz
 
 install tmux
 install openssl
@@ -34,6 +35,8 @@ install watch
 
 install docker
 install boot2docker
+
+install reattach-to-user-namespace
 
 # casks
 
@@ -63,7 +66,8 @@ cask install sublime-text3
 cask install iterm2
 cask install node-webkit
 cask install jumpcut
-cask install mysqlworkbench
+cask install xquartz
+cask install wireshark
 
 cask alfred link
 
