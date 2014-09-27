@@ -17,6 +17,9 @@ install rbenv-gemset
 install rbenv-gem-rehash
 install mysql
 
+install gawk
+install gnu-sed
+
 install imagemagick
 install graphviz
 
