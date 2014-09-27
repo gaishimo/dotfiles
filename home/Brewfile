@@ -19,6 +19,8 @@ install mysql
 
 install gawk
 install gnu-sed
+install nmap
+install wget
 
 install imagemagick
 install graphviz
