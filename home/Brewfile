@@ -9,6 +9,7 @@ install brew-cask
 install zsh
 install git
 install coreutils
+install samba
 
 # ruby
 install rbenv
@@ -21,6 +22,7 @@ install gawk
 install gnu-sed
 install nmap
 install wget
+install tree
 
 install imagemagick
 install graphviz
