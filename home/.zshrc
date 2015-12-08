@@ -35,7 +35,7 @@ zstyle ':zle:*' word-style unspecified
 # autoload predict-on
 # predict-on
 
-bindkey -v
+#bindkey -v
 #bindkey -M viins 'jj' vi-cmd-mode
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
@@ -110,4 +110,8 @@ path=(/usr/local/bin $HOME/bin $HOME/.rbenv/bin(N) $HOME/.nodebrew/current/bin $
 eval "$(rbenv init -)"
 export JAVA_HOME=`/usr/libexec/java_home`
 
-export DOCKER_HOST=tcp://127.0.0.1:4243
+#export DOCKER_HOST=tcp://127.0.0.1:4243
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://192.168.99.100:2376"
+export DOCKER_CERT_PATH="/Users/gaishimo/.docker/machine/machines/dev1"
+export DOCKER_MACHINE_NAME="dev1"

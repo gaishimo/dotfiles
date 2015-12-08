@@ -4,11 +4,13 @@
 [include]
   path = .gitconfig.local
 [color]
-  ui = auto
+	ui = true
 [core]
   editor = vim
   excludesfile = /opt/boxen/config/git/gitignore
 	precomposeunicode = true
+[pager]
+  diff = diff-highlight | less
 
 [hub]
 protocol = https
@@ -23,3 +25,6 @@ protocol = https
 	token = d34e620820d8964e3fd299a3edbebe460555e8b8
 [push]
 	default = simple
+
+[alias]
+  reamend = commit --amend -C HEAD

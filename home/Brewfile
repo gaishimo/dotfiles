@@ -23,6 +23,7 @@ install gnu-sed
 install nmap
 install wget
 install tree
+install jq
 
 install imagemagick
 install graphviz
@@ -39,11 +40,19 @@ install automake
 install hub
 install redis
 install watch
+install ag
+install ipcalc
+install ctags
 
 install docker
 install boot2docker
 
+install mecab
+install mecab-ipadic
+
 install reattach-to-user-namespace
+
+install ffmpeg
 
 # casks
 
