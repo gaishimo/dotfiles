@@ -1,89 +1,84 @@
-update
-upgrade
+tap 'caskroom/cask'
+brew 'brew-cask'
+tap 'homebrew/versions'
+#tap phinze/homebrew-cask
+#tap gaishimo/homebrew-cask
 
-tap homebrew/versions
-tap phinze/homebrew-cask
-tap gaishimo/homebrew-cask
-install brew-cask
-
-install zsh
-install git
-install coreutils
-install samba
+brew 'zsh'
+brew 'git'
+brew 'coreutils'
+#brew 'samba'
 
 # ruby
-install rbenv
-install ruby-build
-install rbenv-gemset
-install rbenv-gem-rehash
-install mysql
+brew 'rbenv'
+brew 'ruby-build'
+brew 'rbenv-gemset'
+brew 'rbenv-gem-rehash'
+#brew 'mysql'
 
-install gawk
-install gnu-sed
-install nmap
-install wget
-install tree
-install jq
+brew 'gawk'
+brew 'gnu-sed'
+brew 'nmap'
+brew 'wget'
+brew 'tree'
+brew 'jq'
 
-install imagemagick
-install graphviz
+brew 'imagemagick'
+brew 'graphviz'
 
-install tmux
-install openssl
-install readline
-install nkf
+brew 'tmux'
+brew 'openssl'
+brew 'readline'
+brew 'nkf'
 tap sanemat/font
-install ricty
-install cmake
-install libtool
-install automake
-install hub
-install redis
-install watch
-install ag
-install ipcalc
-install ctags
+brew 'ricty'
+brew 'cmake'
+brew 'libtool'
+brew 'automake'
+brew 'hub'
+#brew 'redis'
+brew 'watch'
+brew 'ag'
+brew 'ipcalc'
+brew 'ctags'
 
-install docker
-install boot2docker
+#brew 'docker'
+#brew 'boot2docker'
 
-install mecab
-install mecab-ipadic
+#brew 'mecab'
+#brew 'mecab-ipadic'
 
-install reattach-to-user-namespace
+brew 'reattach-to-user-namespace'
 
-install ffmpeg
+brew 'ffmpeg'
 
 # casks
 
-cask install java
-cask install firefox
-cask install opera
-cask install google-chrome
-cask install google-japanese-ime
-cask install sequel-pro
-cask install atom
-cask install skitch
-cask install skype
-cask install charles
-cask install dash
-cask install kobito
-cask install virtualbox
-cask install vagrant
-cask install yorufukurou
-cask install sophos-anti-virus-home-edition
-cask install dropbox
-cask install hipchat
-cask install heroku-toolbelt
-cask install alfred
-cask install divvy
-cask install macvim
-cask install sublime-text3
-cask install iterm2
-cask install node-webkit
-cask install jumpcut
-cask install xquartz
-cask install wireshark
-
-cask alfred link
-
+cask 'java'
+cask 'firefox'
+cask 'opera'
+cask 'google-chrome'
+cask 'google-japanese-ime'
+cask 'sequel-pro'
+cask 'atom'
+#cask 'skitch'
+cask 'skype'
+cask 'charles'
+#cask 'dash'
+#cask 'kobito'
+cask 'virtualbox'
+#cask 'vagrant'
+#cask 'yorufukurou'
+#cask 'sophos-anti-virus-home-edition'
+cask 'dropbox'
+cask 'hipchat'
+cask 'heroku-toolbelt'
+#cask 'alfred'
+#cask 'divvy'
+cask 'macvim'
+#cask 'sublime-text3'
+cask 'iterm2'
+cask 'node-webkit'
+cask 'jumpcut'
+cask 'xquartz'
+cask 'wireshark'
