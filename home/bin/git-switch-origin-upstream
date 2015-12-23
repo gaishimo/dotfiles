@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+
+if [ -n "$(git remote | grep upstream)" ]; then
+  git remote rename origin origin_
+  git remote rename upstream origin
+else
+  git remote rename origin upstream
+  git remote rename origin_ origin
+fi
+echo "origin branch has been switched"
+echo "$(git remote -v | grep "origin\s" | grep \(fetch\) )"
