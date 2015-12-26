@@ -7,7 +7,7 @@ fc-cache -vf
 
 # git diff-highlight
 echo "install diff-highlight"
-curl https://raw.github.com/git/git/master/contrib/diff-highlight/diff-highlight -o /tmp/diff-highlight
+curl https://raw.githubusercontent.com/git/git/master/contrib/diff-highlight/diff-highlight -o /tmp/diff-highlight
 chmod +x /tmp/diff-highlight
 mv /tmp/diff-highlight $HOME/bin/diff-highlight
 
@@ -21,5 +21,7 @@ cp $SETTINGS_PATH/ssh/keys/id* ~/.ssh/
 chmod 600 ~/.ssh/id_*
 cat $SETTINGS_PATH/ssh/configs/* >> ~/.ssh/config
 
+# aws
 mkdir ~/.aws
 cp $SETTINGS_PATH/aws/credentials/gaishimo/* ~/.aws/
+sudo pip install aws-shell
