@@ -25,3 +25,13 @@ cat $SETTINGS_PATH/ssh/configs/* >> ~/.ssh/config
 mkdir ~/.aws
 cp $SETTINGS_PATH/aws/credentials/gaishimo/* ~/.aws/
 sudo pip install aws-shell
+
+# ruby
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+
+# Clone repositories
+git clone git@bitbucket.org:gaishimo/snippets.git $HOME/src/snippets
+mkdir -p $HOME/src/study
+git clone git@github.com:gaishimo/tech-study.git $HOME/src/study/tech-study
+git clone git@github.com:gaishimo/lang-study.git $HOME/src/study/lang-study

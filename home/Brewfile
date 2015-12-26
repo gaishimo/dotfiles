@@ -10,10 +10,10 @@ brew 'coreutils'
 #brew 'samba'
 
 # ruby
-brew 'rbenv'
-brew 'ruby-build'
-brew 'rbenv-gemset'
-brew 'rbenv-gem-rehash'
+#brew 'rbenv'
+#brew 'ruby-build'
+#brew 'rbenv-gemset'
+#brew 'rbenv-gem-rehash'
 brew 'python'
 #brew 'mysql'
 
