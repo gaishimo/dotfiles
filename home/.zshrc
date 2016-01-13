@@ -111,7 +111,8 @@ eval "$(rbenv init -)"
 export JAVA_HOME=`/usr/libexec/java_home`
 
 #export DOCKER_HOST=tcp://127.0.0.1:4243
-export DOCKER_TLS_VERIFY="1"
-export DOCKER_HOST="tcp://192.168.99.100:2376"
-export DOCKER_CERT_PATH="/Users/gaishimo/.docker/machine/machines/dev1"
-export DOCKER_MACHINE_NAME="dev1"
+#export DOCKER_TLS_VERIFY="1"
+#export DOCKER_HOST="tcp://192.168.99.100:2376"
+#export DOCKER_CERT_PATH="/Users/gaishimo/.docker/machine/machines/dev1"
+#export DOCKER_MACHINE_NAME="dev1"
+eval "$(docker-machine env default)"
