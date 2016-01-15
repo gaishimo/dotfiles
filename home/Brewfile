@@ -23,6 +23,7 @@ brew 'nmap'
 brew 'wget'
 brew 'tree'
 brew 'jq'
+brew 'pwgen'
 
 brew 'imagemagick'
 brew 'graphviz'
