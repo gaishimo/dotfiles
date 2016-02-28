@@ -93,6 +93,7 @@ fi
 alias vi='env LANG=ja_JP.UTF-8 ~/Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias vim='env LANG=ja_JP.UTF-8 ~/Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias sed='gsed'
+alias be='bundle exec'
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -114,5 +115,5 @@ export JAVA_HOME=`/usr/libexec/java_home`
 #export DOCKER_TLS_VERIFY="1"
 #export DOCKER_HOST="tcp://192.168.99.100:2376"
 #export DOCKER_CERT_PATH="/Users/gaishimo/.docker/machine/machines/dev1"
-#export DOCKER_MACHINE_NAME="dev1"
-eval "$(docker-machine env default)"
+#export DOCKER_MACHINE_NAME="machine1"
+eval "$(docker-machine env machine1)"

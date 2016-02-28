@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Homebrew
+brew link --force openssl
+
 # ricty font
 echo "copy ricty fonts"
 cp -frv /usr/local/Cellar/ricty/3.2.*/share/fonts/Ricty*.ttf ~/Library/Fonts/
@@ -33,5 +36,4 @@ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-bu
 # Clone repositories
 git clone git@bitbucket.org:gaishimo/snippets.git $HOME/src/snippets
 mkdir -p $HOME/src/study
-git clone git@github.com:gaishimo/tech-study.git $HOME/src/study/tech-study
 git clone git@github.com:gaishimo/lang-study.git $HOME/src/study/lang-study

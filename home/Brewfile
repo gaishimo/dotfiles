@@ -15,7 +15,7 @@ brew 'coreutils'
 #brew 'rbenv-gemset'
 #brew 'rbenv-gem-rehash'
 brew 'python'
-#brew 'mysql'
+brew 'mysql'
 
 brew 'gawk'
 brew 'gnu-sed'
@@ -43,6 +43,7 @@ brew 'watch'
 brew 'ag'
 brew 'ipcalc'
 brew 'ctags'
+brew 'gibo'
 
 #brew 'docker'
 #brew 'boot2docker'
@@ -51,8 +52,8 @@ brew 'ctags'
 #brew 'mecab-ipadic'
 
 brew 'reattach-to-user-namespace'
-
 brew 'ffmpeg'
+brew 'tcpflow'
 
 # casks
 
@@ -84,4 +85,5 @@ cask 'node-webkit'
 cask 'jumpcut'
 cask 'xquartz'
 cask 'wireshark'
+cask 'google-drive'
 cask 'libreoffice'
