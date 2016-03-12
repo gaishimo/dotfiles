@@ -94,6 +94,8 @@ alias vi='env LANG=ja_JP.UTF-8 ~/Applications/MacVim.app/Contents/MacOS/Vim "$@"
 alias vim='env LANG=ja_JP.UTF-8 ~/Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias sed='gsed'
 alias be='bundle exec'
+alias machine='docker-machine'
+
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
