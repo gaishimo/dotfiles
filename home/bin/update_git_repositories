@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for TARGET_DIR in $HOME/snippets $HOME/tech-study
+do
+  echo "target: $TARGET_DIR"
+	cd $TARGET_DIR && git commit -a; git pull --rebase; git push
+done
