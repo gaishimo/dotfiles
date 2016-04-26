@@ -54,6 +54,7 @@ brew 'gibo'
 brew 'reattach-to-user-namespace'
 brew 'ffmpeg'
 brew 'tcpflow'
+brew 'graphviz'
 
 # casks
 
