@@ -90,8 +90,6 @@ elif which putclip >/dev/null 2>&1 ; then
     alias -g C='| putclip'
 fi
 
-alias vi='env LANG=ja_JP.UTF-8 ~/Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-alias vim='env LANG=ja_JP.UTF-8 ~/Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias sed='gsed'
 alias be='bundle exec'
 alias machine='docker-machine'
@@ -137,5 +135,11 @@ alias ruby="docker run -it --rm ruby:2.3-alpine ruby"
 alias irb="docker run -it --rm ruby:2.3-alpine irb"
 alias aws="docker run -it --rm -v ~/.aws:/root/.aws cgswong/aws aws"
 alias python="docker run -it --rm python:3-alpine python"
-alias bq="docker run --rm -ti --volumes-from gcloud-config google/cloud-sdk bq"
+alias aws-python="docker run -it -v ~/.aws:/root/.aws gaishimo/aws-sdk-python python"
 alias gcloud="docker run --rm -ti --volumes-from gcloud-config google/cloud-sdk gcloud"
+#alias bq="docker run --rm -ti --volumes-from gcloud-config google/cloud-sdk bq"
+alias bq="docker run --rm -ti -v `pwd`:/tmp/work --volumes-from gcloud-config google/cloud-sdk bq"
+
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
