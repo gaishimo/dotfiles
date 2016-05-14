@@ -131,15 +131,14 @@ if [ -s "/usr/local/bin/docker-machine" ] ; then
   dm-env > /dev/null 2>&1
 fi
 
-alias ruby="docker run -it --rm ruby:2.3-alpine ruby"
-alias irb="docker run -it --rm ruby:2.3-alpine irb"
-alias aws="docker run -it --rm -v ~/.aws:/root/.aws cgswong/aws aws"
+alias ruby="docker run -it --rm ruby:2.3.1-alpine ruby"
+alias irb="docker run -it --rm ruby:2.3.1-alpine irb"
+alias aws="docker run -it --rm -v ~/.aws:/root/.aws -v `pwd`:/work -w /work cgswong/aws aws"
 alias python="docker run -it --rm python:3-alpine python"
 alias aws-python="docker run -it -v ~/.aws:/root/.aws gaishimo/aws-sdk-python python"
 alias gcloud="docker run --rm -ti --volumes-from gcloud-config google/cloud-sdk gcloud"
-#alias bq="docker run --rm -ti --volumes-from gcloud-config google/cloud-sdk bq"
 alias bq="docker run --rm -ti -v `pwd`:/tmp/work --volumes-from gcloud-config google/cloud-sdk bq"
-
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+alias dynamodblocal="docker run -d -v $HOME/var/log/dynamodblocal:/var/log -v $HOME/var/data/dynamodblocal:/var/dynamodblocal -p 18000:18000 -t takemikami/dynamodblocal"
