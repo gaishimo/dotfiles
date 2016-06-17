@@ -97,7 +97,6 @@ alias machine='docker-machine'
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-export PATH="/usr/local/heroku/bin:$PATH"
 export EDITOR=vim
 #export LESS='--tabs=4 --no-init --LONG-PROMPT --ignore-case --SILENT'
 export GREP_OPTIONS='--color=auto'
@@ -127,13 +126,14 @@ else
   alias dm-env="eval \"\$(docker-machine env default)\""
 fi
 
-if [ -s "/usr/local/bin/docker-machine" ] ; then
-  dm-env > /dev/null 2>&1
-fi
+#if [ -s "/usr/local/bin/docker-machine" ] ; then
+#  dm-env > /dev/null 2>&1
+#fi
 
 alias ruby="docker run -it --rm ruby:2.3-alpine ruby"
 alias irb="docker run -it --rm ruby:2.3-alpine irb"
 alias aws="docker run -it --rm -v ~/.aws:/root/.aws cgswong/aws aws"
+#alias aws ="docker run -it --rm -v ~/.aws:/root/.aws -v .:/tmp/work -w /tmp/work cgswong/aws aws"
 alias python="docker run -it --rm python:3-alpine python"
 alias aws-python="docker run -it -v ~/.aws:/root/.aws gaishimo/aws-sdk-python python"
 alias gcloud="docker run --rm -ti --volumes-from gcloud-config google/cloud-sdk gcloud"
@@ -141,5 +141,7 @@ alias gcloud="docker run --rm -ti --volumes-from gcloud-config google/cloud-sdk 
 alias bq="docker run --rm -ti -v `pwd`:/tmp/work --volumes-from gcloud-config google/cloud-sdk bq"
 
 
+export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
 eval "$(rbenv init -)"

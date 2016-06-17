@@ -10,7 +10,9 @@
   excludesfile = /opt/boxen/config/git/gitignore
 	precomposeunicode = true
 [pager]
-  diff = diff-highlight | less
+	diff = diff-highlight | less
+	log = diff-highlight | less
+	show = diff-highlight | less
 
 [hub]
 protocol = https
@@ -21,6 +23,11 @@ protocol = https
   cm=commit
   co=checkout
 	delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
+  unstage = reset -q HEAD --
+  discard = checkout --
+  uncommit = reset --mixed HEAD~
+  amend = commit --amend
+  graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order
 [ghn]
 	token = d34e620820d8964e3fd299a3edbebe460555e8b8
 [push]
@@ -28,3 +35,5 @@ protocol = https
 
 [alias]
   reamend = commit --amend -C HEAD
+[diff]
+	compactionHeuristic = true
