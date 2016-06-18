@@ -110,31 +110,59 @@ export PROMPT="%d $ "
 path=(/usr/local/bin $HOME/bin $HOME/.rbenv/bin $HOME/.nodebrew/current/bin $path)
 eval "$(rbenv init -)"
 export JAVA_HOME=`/usr/libexec/java_home`
+export GOPATH="$HOME/go"
+export AWS_REGION="ap-northeast-1"
+export AWS_DEFAULT_PROFILE="sub"
+
+# anyframe (http://qiita.com/mollifier/items/81b18c012d7841ab33c3)
+fpath=($HOME/.zsh/anyframe(N-/) $fpath)
+autoload -Uz anyframe-init
+anyframe-init
+bindkey '^xb' anyframe-widget-cdr
+bindkey '^x^b' anyframe-widget-checkout-git-branch
+
+bindkey '^xr' anyframe-widget-execute-history
+bindkey '^x^r' anyframe-widget-execute-history
+
+bindkey '^xi' anyframe-widget-put-history
+bindkey '^x^i' anyframe-widget-put-history
+
+bindkey '^xg' anyframe-widget-cd-ghq-repository
+bindkey '^x^g' anyframe-widget-cd-ghq-repository
+
+bindkey '^xk' anyframe-widget-kill
+bindkey '^x^k' anyframe-widget-kill
+
+bindkey '^xe' anyframe-widget-insert-git-branch
+bindkey '^x^e' anyframe-widget-insert-git-branch
+
 
 #eval "$(docker-machine env machine1)"
 
 alias d="docker"
 alias dc="docker-compose"
-if [ -s "/usr/local/bin/dinghy" ] ; then
-  alias dm="dinghy"
-  alias dm-start="dinghy start && eval \"\$(dinghy shellinit)\""
-  alias dm-restart="dinghy restart && eval \"\$(dinghy shellinit)\""
-  alias dm-env="eval \"\$(dinghy shellinit)\""
-else
-  alias dm="docker-machine"
-  alias dm-start="docker-machine start default && eval \"\$(docker-machine env default)\""
-  alias dm-restart="docker-machine restart default && eval \"\$(docker-machine env default)\""
-  alias dm-env="eval \"\$(docker-machine env default)\""
-fi
+#if [ -s "/usr/local/bin/dinghy" ] ; then
+#  alias dm="dinghy"
+#  alias dm-start="dinghy start && eval \"\$(dinghy shellinit)\""
+#  alias dm-restart="dinghy restart && eval \"\$(dinghy shellinit)\""
+#  alias dm-env="eval \"\$(dinghy shellinit)\""
+#else
+#  alias dm="docker-machine"
+#  alias dm-start="docker-machine start default && eval \"\$(docker-machine env default)\""
+#  alias dm-restart="docker-machine restart default && eval \"\$(docker-machine env default)\""
+#  alias dm-env="eval \"\$(docker-machine env default)\""
+#fi
 
-if [ -s "/usr/local/bin/docker-machine" ] ; then
-  dm-env > /dev/null 2>&1
-fi
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
 
 alias ruby="docker run -it --rm ruby:2.3.1-alpine ruby"
 alias irb="docker run -it --rm ruby:2.3.1-alpine irb"
-alias aws="docker run -it --rm -v ~/.aws:/root/.aws -v `pwd`:/work -w /work cgswong/aws aws"
-alias python="docker run -it --rm python:3-alpine python"
+alias aws='docker run -it --rm -v ~/.aws:/root/.aws -v `pwd`:/work -w /work -e AWS_REGION=ap-northeast-1 -e AWS_DEFAULT_PROFILE=dev cgswong/aws aws'
+alias aws-prod='docker run -it --rm -v ~/.aws:/root/.aws -v `pwd`:/work -w /work -e AWS_REGION=ap-northeast-1 -e AWS_DEFAULT_PROFILE=prod cgswong/aws aws'
+alias d-python="docker run -it --rm python:3-alpine python"
 alias aws-python="docker run -it -v ~/.aws:/root/.aws gaishimo/aws-sdk-python python"
 alias gcloud="docker run --rm -ti --volumes-from gcloud-config google/cloud-sdk gcloud"
 alias bq="docker run --rm -ti -v `pwd`:/tmp/work --volumes-from gcloud-config google/cloud-sdk bq"
