@@ -97,7 +97,6 @@ alias machine='docker-machine'
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-export PATH="/usr/local/heroku/bin:$PATH"
 export EDITOR=vim
 #export LESS='--tabs=4 --no-init --LONG-PROMPT --ignore-case --SILENT'
 export GREP_OPTIONS='--color=auto'
@@ -157,7 +156,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-
 alias ruby="docker run -it --rm ruby:2.3.1-alpine ruby"
 alias irb="docker run -it --rm ruby:2.3.1-alpine irb"
 alias aws='docker run -it --rm -v ~/.aws:/root/.aws -v `pwd`:/work -w /work -e AWS_REGION=ap-northeast-1 -e AWS_DEFAULT_PROFILE=dev cgswong/aws aws'
@@ -168,5 +166,6 @@ alias gcloud="docker run --rm -ti --volumes-from gcloud-config google/cloud-sdk 
 alias bq="docker run --rm -ti -v `pwd`:/tmp/work --volumes-from gcloud-config google/cloud-sdk bq"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
 eval "$(rbenv init -)"
 alias dynamodblocal="docker run -d -v $HOME/var/log/dynamodblocal:/var/log -v $HOME/var/data/dynamodblocal:/var/dynamodblocal -p 18000:18000 -t takemikami/dynamodblocal"
