@@ -106,7 +106,9 @@ export PROMPT="%d $ "
 # source ~/.bin/tmuxinator.bash
 [ -f $HOME/.zshrc.mine ] && source $HOME/.zshrc.mine
 
-path=(/usr/local/bin $HOME/bin $HOME/.rbenv/bin $HOME/.nodebrew/current/bin $path)
+path=(/usr/local/bin $HOME/bin $HOME/.rbenv/bin $HOME/.nodebrew/current/bin $/usr/local/share/git-core/contrib/diff-highlight $path)
+
+
 eval "$(rbenv init -)"
 export JAVA_HOME=`/usr/libexec/java_home`
 export GOPATH="$HOME/go"
